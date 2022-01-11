@@ -6,6 +6,10 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
 var users=[
+    {
+        name:"abc",
+        email:"xyz@gmail.com"
+    }
    
 ]
 app.get('/',function(req,res)

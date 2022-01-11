@@ -5,10 +5,13 @@
     </head>
     <body>
         <%for(let ele of user_list){%>
-            <li>
+            <div>
                 <%=ele.name%>
                 <%=ele.email%>
-            </li>
+                <button>Update</button>
+                <button>delete</button>
+
+            </div>
         <%}%>
        
         <button onclick="location.href = 'http://localhost:3000/form'">Add</button>

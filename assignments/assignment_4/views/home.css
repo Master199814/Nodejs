@@ -1,0 +1,14 @@
+.redcolor{
+    background-color:red;
+}
+.greencolor
+{
+    background-color:green;
+}
+.yellowcolor
+{
+    background-color:yellow;
+}
+form,button{
+    display: inline-block;
+}
