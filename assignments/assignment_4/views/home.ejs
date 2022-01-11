@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <link href="home.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <%for(let ele of userslist){%>
+            <%if(ele.ispromoted){%>
+                <li>
+                    <span style="color: green;"><%=ele.username%></span>
+                    <span style="color: green;"><%=ele.useremail%></span>
+                    <!-- <a href="/user/<%=ele._id%>/promote">Promote</a>
+                    <a href="/user/<%=ele._id%>/delete">Delete</a> -->
+                    <form method="POST" action="/user/<%=ele._id%>/promote">
+                        <button  type="submit">Select</button>
+                    </form>
+                    <form method="POST" action="/user/<%=ele._id%>/delete">
+                        <button >Delete</button>
+                    </form> 
+                </li>
+             
+            <%}else if(ele.ispromoted==false){%>
+                <li >
+                    <span style="color: red;"><%=ele.username%></span>
+                    <span style="color: red;"><%=ele.useremail%></span>
+                        <!-- <a href="/user/<%=ele._id%>/promote">Promote</a>
+                        <a href="/user/<%=ele._id%>/delete">Delete</a> -->
+                    <form method="POST" action="/user/<%=ele._id%>/promote">
+                        <button  type="submit">Select</button>
+                    </form>
+                    <form method="POST" action="/user/<%=ele._id%>/delete">
+                        <button >Delete</button>
+                    </form>
+            <%}else {%>
+                <li >
+                    <span style="color:yellow"><%=ele.username%></span>
+                    <span style="color:yellow"><%=ele.useremail%></span>
+                        <!-- <a href="/user/<%=ele._id%>/promote">Promote</a>
+                        <a href="/user/<%=ele._id%>/delete">Delete</a> -->
+                    <form method="POST" action="/user/<%=ele._id%>/promote">
+                        <button  type="submit">Select</button>
+                    </form>
+                    <form method="POST" action="/user/<%=ele._id%>/delete">
+                        <button >Delete</button>
+                    </form> 
+                </li>
+            <%}%>
+        <%}%>
+        <br/>
+        
+        <button onclick="location.href = 'http://localhost:3000/form'">Add</button>
+
+    </body>
+</html>
